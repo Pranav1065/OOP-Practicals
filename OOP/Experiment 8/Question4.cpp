@@ -1,50 +1,54 @@
-//Employee — Store and Display 5 Employees
+//WAP to create a class student having data members as roll-no,name and percentage.Accept
+data for 10 students and display names of students having percentage greater than 75.
 #include <iostream>
 using namespace std;
 
-class Employee
+class Student
 {
+    int rollno;
     string name;
-    int id;
-    string department;
+    float percentage;
 
 public:
     void getData()
     {
+        cout << "Enter Roll No: ";
+        cin >> rollno;
+
         cout << "Enter Name: ";
         cin >> name;
 
-        cout << "Enter ID: ";
-        cin >> id;
-
-        cout << "Enter Department: ";
-        cin >> department;
+        cout << "Enter Percentage: ";
+        cin >> percentage;
     }
 
     void display()
     {
-        cout << "\nName: " << name;
-        cout << "\nID: " << id;
-        cout << "\nDepartment: " << department << endl;
+        if(percentage > 75)
+        {
+            cout << "\nName: " << name;
+            cout << "\nRoll No: " << rollno;
+            cout << "\nPercentage: " << percentage << endl;
+        }
     }
 };
 
 int main()
 {
-    Employee e[5];
+    Student s[10];
     int i;
 
-    for(i = 0; i < 5; i++)
+    for(i = 0; i < 10; i++)
     {
-        cout << "\nEmployee " << i + 1 << endl;
-        e[i].getData();
+        cout << "\nStudent " << i + 1 << endl;
+        s[i].getData();
     }
 
-    cout << "\nEmployee Details:\n";
+    cout << "\nStudents having percentage greater than 75:\n";
 
-    for(i = 0; i < 5; i++)
+    for(i = 0; i < 10; i++)
     {
-        e[i].display();
+        s[i].display();
     }
 
     return 0;
