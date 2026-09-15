@@ -5,13 +5,13 @@ using namespace std;
 class student{
     private:
     string name;
-    unsigned short roll;
+    int roll;
     int marks;
     public:
     student(){
-        name = "Aitya Chavan";
-        roll = 11;
-        marks = 90;
+        name = "naiteek";
+        roll = 17;
+        marks = 99;
     }
     void display(){
         cout << "Name: " << name << endl;
@@ -21,7 +21,7 @@ class student{
 };
 
 int main() {
-    student hi;
-    hi.display();
+    student s;
+    s.display();
     return 0;
 }
