@@ -4,10 +4,10 @@ using namespace std;
 class student{
     private:
     string name;
-    unsigned short roll;
+   int roll;
     int marks;
     public:
-    student(string n, unsigned short r, int m){
+    student(int n, int r, int m){
         name = n;
         roll = r;
         marks = m;
@@ -19,10 +19,10 @@ class student{
     }
 };
 int main() {
-    student hi("Aditya Chavahhan", 11, 88);
-    student hihi("igfigfgfdfg ef", 625, 1);
-    hi.display();
-    hihi.display();
+    student s("Naiteek", 17, 9);
+    student s1("igfigfgfdfg ef", 625, 1);
+    s.display();
+    s1.display();
 
     return 0;
 }
